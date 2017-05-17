@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 此处定义的是VO类与SQL语句之间的处理关系，namespace描述的是一个命名空间 -->
+<mapper namespace="cn.mldn.mapping.MemberNS">
+	<insert id="doCreate" parameterType="Member">
+		insert into member (mid,name) values(#{mid},#{name})
+	</insert>
+	
+	<select id="findById" parameterType="String" resultType="Member">
+		select mid,name from member where mid=#{mid}
+	</select>
+	
+	<update id="doUpdate" parameterType="Member">
+		update member set name=#{name} where mid=#{mid}
+	</update>
+</mapper>

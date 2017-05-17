@@ -1,0 +1,6 @@
+2017-05-15 20:52:39,403 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - ==>  Preparing: insert into member (mid,name,age,salary,birthday,note) values(?,?,?,?,?,?) ; 
+2017-05-15 20:52:39,461 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - ==> Parameters: mldn=839(String), 测试名字(String), 19(Integer), 1.1(Double), 2017-05-15 20:52:39.263(Timestamp), 是个好人。(String)
+2017-05-15 20:52:39,462 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-15 22:58:39,458 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - ==>  Preparing: insert into member (mid,name,age,salary,birthday,note) values(?,?,?,?,?,?) ; 
+2017-05-15 22:58:39,551 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - ==> Parameters: mldn=781(String), 测试名字(String), 19(Integer), 1.1(Double), 2017-05-15 22:58:38.939(Timestamp), 是个好人。(String)
+2017-05-15 22:58:39,556 DEBUG [cn.mldn.mymybatisdemo.mapping.MemberNS.doCreate] - <==    Updates: 1

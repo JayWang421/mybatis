@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 此处定义的是VO类与SQL语句之间的处理关系，namespace描述的是一个命名空间 -->
+<mapper namespace="cn.mldn.mymybatisdemo.mapping.MemberNS">
+	<insert id="doCreate" parameterType="cn.mldn.mymybatisdemo.vo.Member">
+		insert into member (mid,name,age,salary,birthday,note) 
+		values(#{mid},#{name},#{age},#{salary},#{birthday},#{note}) ;
+	</insert>
+</mapper>

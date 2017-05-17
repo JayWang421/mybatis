@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 此处定义的是VO类与SQL语句之间的处理关系，namespace描述的是一个命名空间 -->
+<mapper namespace="cn.mldn.dao.INewsDAO">
+	<insert id="doCreate" parameterType="News" keyProperty="nid" useGeneratedKeys="true">
+		insert into news (title,note) values(#{title},#{note}) ;
+	</insert>
+	<select id="findAllSplit" parameterType="map" resultType="news">
+		select nid,title,note from news where ${column} like #{keyWord} limit ${start},#{lineSize} ; ;
+	</select>
+</mapper>

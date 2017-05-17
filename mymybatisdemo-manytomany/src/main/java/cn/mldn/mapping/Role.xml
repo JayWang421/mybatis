@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 此处定义的是VO类与SQL语句之间的处理关系，namespace描述的是一个命名空间 -->
+<mapper namespace="cn.mldn.mapping.RoleNS">
+	<insert id="doCreateMemberRole" parameterType="map">
+		insert into member_role(mid,rid) values(#{mid},#{rid})
+	</insert>
+	
+	<select id="findAllFlagByMid" parameterType="string" resultType="string">
+		select flag from role where rid in(
+		 	select rid from member_role where mid=#{mid})
+	</select>
+	
+	<select id="findAllByMid" parameterType="String" resultType="Role">
+		select rid,title,flag from role where rid in(
+		 	select rid from member_role where mid=#{mid})
+	</select>
+	
+	<delete id="doRemoveRoleByMid" parameterType="map">
+		delete from member_role where mid=#{mid}
+	</delete>
+	
+	
+</mapper>

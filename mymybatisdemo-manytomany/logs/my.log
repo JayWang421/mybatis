@@ -1,0 +1,138 @@
+2017-05-17 01:12:30,351 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: insert into member (mid,name) values(?,?) 
+2017-05-17 01:12:30,397 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: hello(String), world(String)
+2017-05-17 01:12:30,409 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-17 01:13:29,562 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: insert into member (mid,name) values(?,?) 
+2017-05-17 01:13:29,630 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: hello(String), world(String)
+2017-05-17 01:13:29,632 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-17 01:14:07,346 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: insert into member (mid,name) values(?,?) 
+2017-05-17 01:14:07,413 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: hello(String), world(String)
+2017-05-17 01:14:07,420 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-17 01:14:07,420 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,422 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 1(Long)
+2017-05-17 01:14:07,423 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:14:07,423 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,424 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 2(Long)
+2017-05-17 01:14:07,425 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:14:07,426 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,427 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 3(Long)
+2017-05-17 01:14:07,428 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:14:07,428 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,429 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 4(Long)
+2017-05-17 01:14:07,430 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:14:07,430 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,431 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 5(Long)
+2017-05-17 01:14:07,431 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:14:07,432 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 01:14:07,433 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 6(Long)
+2017-05-17 01:14:07,433 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 01:31:57,365 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==>  Preparing: select mid,name from member where mid=? 
+2017-05-17 01:31:57,409 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==> Parameters: hello(String)
+2017-05-17 01:31:57,436 TRACE [cn.mldn.mapping.MemberNS.findById] - <==    Columns: mid, name
+2017-05-17 01:31:57,437 TRACE [cn.mldn.mapping.MemberNS.findById] - <==        Row: hello, world
+2017-05-17 01:31:57,439 DEBUG [cn.mldn.mapping.MemberNS.findById] - <==      Total: 1
+2017-05-17 01:31:57,441 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==>  Preparing: select flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:31:57,442 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==> Parameters: hello(String)
+2017-05-17 01:31:57,444 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==    Columns: flag
+2017-05-17 01:31:57,444 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: member
+2017-05-17 01:31:57,446 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: goods
+2017-05-17 01:31:57,446 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: orders
+2017-05-17 01:31:57,446 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: admin
+2017-05-17 01:31:57,446 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: center
+2017-05-17 01:31:57,446 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: shopcar
+2017-05-17 01:31:57,447 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==      Total: 6
+2017-05-17 01:31:57,447 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==>  Preparing: select rid,title,flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:31:57,449 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==> Parameters: hello(String)
+2017-05-17 01:31:57,450 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==    Columns: rid, title, flag
+2017-05-17 01:31:57,450 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 1, 【管理员】用户管理, member
+2017-05-17 01:31:57,452 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 2, 【管理员】商品管理, goods
+2017-05-17 01:31:57,452 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 3, 【管理员】订单管理, orders
+2017-05-17 01:31:57,453 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 4, 【管理员】后台管理, admin
+2017-05-17 01:31:57,454 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 5, 【前台用户】个人中心, center
+2017-05-17 01:31:57,454 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 6, 【前台用户】购物车, shopcar
+2017-05-17 01:31:57,455 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - <==      Total: 6
+2017-05-17 01:32:41,518 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==>  Preparing: select mid,name from member where mid=? 
+2017-05-17 01:32:41,556 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==> Parameters: hello(String)
+2017-05-17 01:32:41,579 TRACE [cn.mldn.mapping.MemberNS.findById] - <==    Columns: mid, name
+2017-05-17 01:32:41,579 TRACE [cn.mldn.mapping.MemberNS.findById] - <==        Row: hello, world
+2017-05-17 01:32:41,582 DEBUG [cn.mldn.mapping.MemberNS.findById] - <==      Total: 1
+2017-05-17 01:32:41,583 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==>  Preparing: select flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:32:41,585 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==> Parameters: hello(String)
+2017-05-17 01:32:41,586 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==    Columns: flag
+2017-05-17 01:32:41,587 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: member
+2017-05-17 01:32:41,588 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: goods
+2017-05-17 01:32:41,589 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: orders
+2017-05-17 01:32:41,589 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: admin
+2017-05-17 01:32:41,589 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: center
+2017-05-17 01:32:41,589 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: shopcar
+2017-05-17 01:32:41,589 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==      Total: 6
+2017-05-17 01:32:41,590 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==>  Preparing: select rid,title,flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:32:41,591 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==> Parameters: hello(String)
+2017-05-17 01:32:41,592 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==    Columns: rid, title, flag
+2017-05-17 01:32:41,592 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 1, 【管理员】用户管理, member
+2017-05-17 01:32:41,593 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 2, 【管理员】商品管理, goods
+2017-05-17 01:32:41,594 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 3, 【管理员】订单管理, orders
+2017-05-17 01:32:41,594 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 4, 【管理员】后台管理, admin
+2017-05-17 01:32:41,595 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 5, 【前台用户】个人中心, center
+2017-05-17 01:32:41,596 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 6, 【前台用户】购物车, shopcar
+2017-05-17 01:32:41,596 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - <==      Total: 6
+2017-05-17 01:34:44,081 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==>  Preparing: select mid,name from member where mid=? 
+2017-05-17 01:34:44,122 DEBUG [cn.mldn.mapping.MemberNS.findById] - ==> Parameters: hello(String)
+2017-05-17 01:34:44,151 TRACE [cn.mldn.mapping.MemberNS.findById] - <==    Columns: mid, name
+2017-05-17 01:34:44,151 TRACE [cn.mldn.mapping.MemberNS.findById] - <==        Row: hello, world
+2017-05-17 01:34:44,154 DEBUG [cn.mldn.mapping.MemberNS.findById] - <==      Total: 1
+2017-05-17 01:34:44,155 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==>  Preparing: select flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:34:44,156 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - ==> Parameters: hello(String)
+2017-05-17 01:34:44,157 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==    Columns: flag
+2017-05-17 01:34:44,158 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: member
+2017-05-17 01:34:44,159 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: goods
+2017-05-17 01:34:44,159 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: orders
+2017-05-17 01:34:44,159 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: admin
+2017-05-17 01:34:44,159 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: center
+2017-05-17 01:34:44,159 TRACE [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==        Row: shopcar
+2017-05-17 01:34:44,160 DEBUG [cn.mldn.mapping.RoleNS.findAllFlagByMid] - <==      Total: 6
+2017-05-17 01:34:44,160 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==>  Preparing: select rid,title,flag from role where rid in( select rid from member_role where mid=?) 
+2017-05-17 01:34:44,161 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - ==> Parameters: hello(String)
+2017-05-17 01:34:44,163 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==    Columns: rid, title, flag
+2017-05-17 01:34:44,163 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 1, 【管理员】用户管理, member
+2017-05-17 01:34:44,164 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 2, 【管理员】商品管理, goods
+2017-05-17 01:34:44,164 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 3, 【管理员】订单管理, orders
+2017-05-17 01:34:44,165 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 4, 【管理员】后台管理, admin
+2017-05-17 01:34:44,166 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 5, 【前台用户】个人中心, center
+2017-05-17 01:34:44,166 TRACE [cn.mldn.mapping.RoleNS.findAllByMid] - <==        Row: 6, 【前台用户】购物车, shopcar
+2017-05-17 01:34:44,167 DEBUG [cn.mldn.mapping.RoleNS.findAllByMid] - <==      Total: 6
+2017-05-17 01:49:18,473 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 01:49:18,511 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: null, null
+2017-05-17 01:49:18,517 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 0
+2017-05-17 01:50:12,763 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 01:50:12,801 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: world(String), world(String)
+2017-05-17 01:50:12,804 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 0
+2017-05-17 01:50:51,517 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 01:50:51,557 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: 你好(String), 你好(String)
+2017-05-17 01:50:51,559 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 0
+2017-05-17 01:51:23,304 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 01:51:23,344 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: 你好(String), 你好(String)
+2017-05-17 01:51:23,345 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 0
+2017-05-17 01:53:34,690 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 01:53:34,729 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: 世界(String), hello(String)
+2017-05-17 01:53:34,731 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 1
+2017-05-17 02:29:27,166 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==>  Preparing: update member set name=? where mid=? 
+2017-05-17 02:29:27,328 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - ==> Parameters: 世界好(String), hello(String)
+2017-05-17 02:29:27,329 DEBUG [cn.mldn.mapping.MemberNS.doUpdate] - <==    Updates: 1
+2017-05-17 02:29:27,330 DEBUG [cn.mldn.mapping.RoleNS.doRemoveRoleByMid] - ==>  Preparing: delete from member_role where mid=? 
+2017-05-17 02:29:27,346 DEBUG [cn.mldn.mapping.RoleNS.doRemoveRoleByMid] - ==> Parameters: hello(String)
+2017-05-17 02:29:27,347 DEBUG [cn.mldn.mapping.RoleNS.doRemoveRoleByMid] - <==    Updates: 6
+2017-05-17 02:29:27,347 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 02:29:27,350 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 1(Long)
+2017-05-17 02:29:27,351 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 02:29:27,352 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 02:29:27,353 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 3(Long)
+2017-05-17 02:29:27,354 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 02:29:27,355 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 02:29:27,356 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 5(Long)
+2017-05-17 02:29:27,357 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 02:29:27,357 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 02:29:27,358 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 9(Long)
+2017-05-17 02:29:27,359 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
+2017-05-17 02:29:27,360 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==>  Preparing: insert into member_role(mid,rid) values(?,?) 
+2017-05-17 02:29:27,362 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - ==> Parameters: hello(String), 2(Long)
+2017-05-17 02:29:27,363 DEBUG [cn.mldn.mapping.RoleNS.doCreateMemberRole] - <==    Updates: 1
